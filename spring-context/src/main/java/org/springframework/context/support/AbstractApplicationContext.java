@@ -1122,11 +1122,14 @@ public abstract class AbstractApplicationContext extends DefaultResourceLoader
 
 	//---------------------------------------------------------------------
 	// Implementation of BeanFactory interface
+	// BeanFactory接口的实现
 	//---------------------------------------------------------------------
 
 	@Override
 	public Object getBean(String name) throws BeansException {
+		//检测BeanFactory的激活状态
 		assertBeanFactoryActive();
+		//getBeanFactory()工厂里获取到的是一个DefaultListableBeanFactory的实例
 		return getBeanFactory().getBean(name);
 	}
 

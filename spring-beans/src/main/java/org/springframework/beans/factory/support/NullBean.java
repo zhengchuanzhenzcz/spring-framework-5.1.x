@@ -33,6 +33,10 @@ import org.springframework.lang.Nullable;
  * @author Juergen Hoeller
  * @since 5.0
  */
+
+/**
+ * 空bean实例的内部表示，例如从{ @link FactoryBean#getObject（）} 或工厂方法返回的{ @code null}值。
+ */
 final class NullBean {
 
 	NullBean() {
